@@ -37,20 +37,21 @@ const config: DocsThemeConfig = {
       lang="javascript"
       dangerouslySetInnerHTML={{
         __html: `document.addEventListener("DOMContentLoaded", function() {
-      const navElement = document.querySelector("nav");
-      if (navElement) {
-        navElement.style.display = "none";
-      }
+          const navElement = document.querySelector("nav");
+          const footerElement = document.querySelector("footer");
+          if (navElement) {
+            navElement.style.display = "none";
+          }
+          if (footerElement) {
+            footerElement.style.display = "none";
+          }
     });`,
       }}
     />
   ),
-  docsRepositoryBase: "https://github.com/shuding/nextra-docs-template",
+  docsRepositoryBase: "https://github.com/lookevink/eso-portal-doc",
   nextThemes: {
     defaultTheme: "light",
-  },
-  footer: {
-    text: "Easy Street Offers © 2023 Documentation",
   },
   useNextSeoProps() {
     return {
