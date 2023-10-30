@@ -32,7 +32,23 @@ const config: DocsThemeConfig = {
       </svg>
     ),
   },
+  head: (
+    <script
+      lang="javascript"
+      dangerouslySetInnerHTML={{
+        __html: `document.addEventListener("DOMContentLoaded", function() {
+      const navElement = document.querySelector("nav");
+      if (navElement) {
+        navElement.style.display = "none";
+      }
+    });`,
+      }}
+    />
+  ),
   docsRepositoryBase: "https://github.com/shuding/nextra-docs-template",
+  nextThemes: {
+    defaultTheme: "light",
+  },
   footer: {
     text: "Easy Street Offers © 2023 Documentation",
   },
